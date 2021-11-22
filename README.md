@@ -2,7 +2,7 @@
 
 <a href="#"><img width="100%" height="auto" src="https://i.ibb.co/dfXxSt0/bkuddin.png"/></a>
 
-<h1 align="center">Hi <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">, I'm Bakhtiar Uddin</h1>
+<h1 align="center">Hi <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">, I'm Joy Bose</h1>
 <h3 align="center">I'm a passionate Full Stack Developer from Bangladesh.</h3>
 
 
@@ -14,11 +14,11 @@
 
 - 👯 I’m looking to collaborate on **Remote Job**
 
-- 👨‍💻 All of my projects are available at **[coming soon](https://https://github.com/bkuddin)**
+- 👨‍💻 All of my projects are available at **[coming soon]()**
 
-- 📫 How to reach me **1bkhossain@gmail.com**
+- 📫 How to reach me **joybose976@gmail.com**
 
-- ⚡ Fun fact **I Love to play badminton**
+- ⚡ Fun fact **I Love to play Code**
 
 ## 🚀 Languages and Tools:
 
@@ -42,7 +42,7 @@
 ## Connect with me:
 <p align="left">
 
-<a href = "https://www.facebook.com/bakhtiar.uddins/"><img src="https://icons8.com/icon/118497/facebook"/></a> 
+<a href = "https://www.facebook.com/profile.php?id=100013015151246https://www.facebook.com/profile.php?id=100013015151246"><img src="https://scontent.fcgp27-1.fna.fbcdn.net/v/t39.30808-6/215641605_1201423513634809_4527798937943766578_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=RSR7qqW8Ui4AX89st-b&_nc_ht=scontent.fcgp27-1.fna&oh=90426d1b85f2387ed01cfa0fffee6d5d&oe=61A056FD"/></a> 
 <a href = "https://twitter.com/"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a>
 <a href = "https://www.instagram.com/"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png"/></a>
 <a href = "https://www.youtube.com/"><img src="https://img.icons8.com/color/48/000000/youtube-play.png"/></a>
