@@ -42,7 +42,7 @@
 ## Connect with me:
 <p align="left">
 
-<a href = "https://www.facebook.com/profile.php?id=100013015151246https://www.facebook.com/profile.php?id=100013015151246"><img src="https://scontent.fcgp27-1.fna.fbcdn.net/v/t39.30808-6/215641605_1201423513634809_4527798937943766578_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=RSR7qqW8Ui4AX89st-b&_nc_ht=scontent.fcgp27-1.fna&oh=90426d1b85f2387ed01cfa0fffee6d5d&oe=61A056FD"/></a> 
+<a href = "https://www.facebook.com/profile.php?id=100013015151246https://www.facebook.com/profile.php?id=100013015151246"><img  src="https://img.icons8.com/color/48/000000/facebook.png"/></a> 
 <a href = "https://twitter.com/"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a>
 <a href = "https://www.instagram.com/"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png"/></a>
 <a href = "https://www.youtube.com/"><img src="https://img.icons8.com/color/48/000000/youtube-play.png"/></a>
