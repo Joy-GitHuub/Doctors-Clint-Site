@@ -3,11 +3,13 @@ import React, { useState } from 'react';
 import { NavLink, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import login from '../../../images/login.png'
+import './Login.css'
 
 const Login = () => {
 
     const [loginData, setLoginData] = useState({});
-    const { user, logingUser, isLoading, authError } = useAuth();
+    const { user, logingUser, isLoading, signInWithGoogle, authError } = useAuth();
+
     const location = useLocation();
     const history = useHistory();
 
@@ -23,6 +25,10 @@ const Login = () => {
     const handleLoginSubmit = e => {
         logingUser(loginData.email, loginData.password, location, history);
         e.preventDefault();
+    }
+
+    const handleGoogleSignIn = () => {
+        signInWithGoogle(location, history);
     }
 
     return (
@@ -52,8 +58,12 @@ const Login = () => {
                             to="/register">
                             <Button variant="text">New User? Please Register</Button>
                         </NavLink>
-
                     </form>}
+                    <div>
+                        <button
+                            onClick={handleGoogleSignIn}
+                            className="g-btn d-flex align-items-center mx-auto"><i className="fab fa-google"></i> Continue with Google</button>
+                    </div>
 
                     {
                         isLoading && <CircularProgress />

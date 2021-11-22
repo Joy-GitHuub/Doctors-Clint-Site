@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import initializeFirebase from '../Pages/Login/Firebase/Firebase.Init';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "firebase/auth";
 
 initializeFirebase();
 
@@ -12,6 +12,7 @@ const useFirebase = () => {
 
 
     const auth = getAuth();
+    const googleProvider = new GoogleAuthProvider();
 
     // User Register 
     const registerUser = (email, password) => {
@@ -39,6 +40,19 @@ const useFirebase = () => {
                 setAuthError(error.message)
             }).finally(() => setIsLoading(false));
     };
+
+    // User Google Login 
+    const signInWithGoogle = (location, history) => {
+        setIsLoading(true);
+        signInWithPopup(auth, googleProvider)
+            .then((result) => {
+                const destination = location?.state?.from || '/';
+                history.replace(destination)
+                setAuthError('')
+            }).catch((error) => {
+                setAuthError(error.message)
+            }).finally(() => setIsLoading(false));
+    }
 
     // Observer User State
     useEffect(() => {
@@ -73,6 +87,7 @@ const useFirebase = () => {
         authError,
         registerUser,
         logingUser,
+        signInWithGoogle,
         logOut,
     }
 
