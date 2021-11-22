@@ -51,7 +51,7 @@
 </p>
 
 ## ❤ Views and Followers
-<a href="https://github.com/Meghna-DAS/github-profile-views-counter">
+<a href="">
     <img src="https://komarev.com/ghpvc/?username=bkuddin">
 </a>
-<a href="https://github.com/bkuddin?tab=followers"><img src="https://img.shields.io/github/followers/bkuddin?label=Followers&style=social" alt="GitHub Badge"></a>
+<a href=''><img src="https://img.shields.io/github/followers/bkuddin?label=Followers&style=social" alt="GitHub Badge"></a>
