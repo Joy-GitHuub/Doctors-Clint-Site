@@ -58,12 +58,14 @@ const Login = () => {
                             to="/register">
                             <Button variant="text">New User? Please Register</Button>
                         </NavLink>
+
+                        <div>
+                            <button
+                                onClick={handleGoogleSignIn}
+                                className="g-btn d-flex align-items-center mx-auto"><i className="fab fa-google"></i> Continue with Google</button>
+                        </div>
                     </form>}
-                    <div>
-                        <button
-                            onClick={handleGoogleSignIn}
-                            className="g-btn d-flex align-items-center mx-auto"><i className="fab fa-google"></i> Continue with Google</button>
-                    </div>
+
 
                     {
                         isLoading && <CircularProgress />
