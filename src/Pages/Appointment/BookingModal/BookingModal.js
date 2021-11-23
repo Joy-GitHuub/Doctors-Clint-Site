@@ -62,17 +62,34 @@ const BookingModal = ({ openBooking, handleBookingClose, booking, date }) => {
                     swal("Your Booking Cancle!");
                     return
                 }
+                // Collect Data
                 const appointment = {
                     ...bookingInfo,
                     time,
                     serviceName: name,
                     date: date.toLocaleDateString()
                 }
-                console.log(appointment);
+                // Send To the Server
+                const url = `http://localhost:5000/userAppointment`
+                fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(appointment)
+                }).then(res => res.json())
+                    .then(data => {
+                        if (data.insertedId) {
+                            // SuccessFully message
+
+                            handleBookingClose();
+                        }
+                    })
+
 
             });
 
-        handleBookingClose();
+
 
     }
 
