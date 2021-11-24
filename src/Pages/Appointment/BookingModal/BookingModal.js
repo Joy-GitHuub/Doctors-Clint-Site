@@ -19,7 +19,7 @@ const style = {
     p: 4,
 };
 
-const BookingModal = ({ openBooking, handleBookingClose, booking, date }) => {
+const BookingModal = ({ openBooking, handleBookingClose, booking, date, setBookingSuccess }) => {
 
     const { name, time } = booking;
     const { user } = useAuth();
@@ -81,7 +81,7 @@ const BookingModal = ({ openBooking, handleBookingClose, booking, date }) => {
                     .then(data => {
                         if (data.insertedId) {
                             // SuccessFully message
-
+                            setBookingSuccess(true);
                             handleBookingClose();
                         }
                     })

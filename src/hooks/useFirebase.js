@@ -9,6 +9,7 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [authError, setAuthError] = useState('');
     const [isLoading, setIsLoading] = useState(true);
+    const [admin, setAdmin] = useState(false);
 
 
     const auth = getAuth();
@@ -24,6 +25,8 @@ const useFirebase = () => {
                 const newUser = { email, displayName: name }
                 setUser(newUser)
 
+                // Save User to Data base
+                saveUser(email, name, 'POST')
                 // Send Name To Firebase After Creation
                 updateProfile(auth.currentUser, {
                     displayName: name
@@ -56,6 +59,8 @@ const useFirebase = () => {
         setIsLoading(true);
         signInWithPopup(auth, googleProvider)
             .then((result) => {
+                const user = result.user;
+                saveUser(user.email, user.displayName, 'PUT')
                 const destination = location?.state?.from || '/';
                 history.replace(destination)
                 setAuthError('')
@@ -78,6 +83,13 @@ const useFirebase = () => {
         return () => unSubscribe;
     }, [auth])
 
+    // 
+    useEffect(() => {
+        const url = `http://localhost:5000/users/${user.email}`
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setAdmin(data.admin))
+    }, [user.email])
 
 
     // User LogOut Website
@@ -90,11 +102,25 @@ const useFirebase = () => {
         }).finally(() => setIsLoading(false))
     }
 
+    // Save User 
+    const saveUser = (email, displayName, method) => {
+        const user = { email, displayName };
+        fetch(`http://localhost:5000/users`, {
+            method: method,
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then()
+    }
+
 
     return {
         user,
         isLoading,
         authError,
+        admin,
         registerUser,
         logingUser,
         signInWithGoogle,

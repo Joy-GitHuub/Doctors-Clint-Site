@@ -40,6 +40,10 @@ const Navigation = () => {
                     <NavLink style={{ textDecoration: 'none', color: 'white' }} to='/appointment'>
                         <Button color="inherit">Appointment</Button>
                     </NavLink>
+
+                    {user.email && <NavLink style={{ textDecoration: 'none', color: 'white' }} to='/dashboard'>
+                        <Button color="inherit">Dashboard</Button>
+                    </NavLink>}
                     {
                         user?.email ?
 
