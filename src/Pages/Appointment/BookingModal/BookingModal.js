@@ -21,7 +21,7 @@ const style = {
 
 const BookingModal = ({ openBooking, handleBookingClose, booking, date, setBookingSuccess }) => {
 
-    const { name, time } = booking;
+    const { name, time, price } = booking;
     const { user } = useAuth();
     const initialInfo = { patientName: user.displayName, email: user.email, phoneNumber: '' }
 
@@ -67,8 +67,10 @@ const BookingModal = ({ openBooking, handleBookingClose, booking, date, setBooki
                     ...bookingInfo,
                     time,
                     serviceName: name,
+                    price,
                     date: date.toLocaleDateString()
                 }
+                console.log(appointment)
                 // Send To the Server
                 const url = `http://localhost:5000/userAppointment`
                 fetch(url, {
@@ -85,12 +87,7 @@ const BookingModal = ({ openBooking, handleBookingClose, booking, date, setBooki
                             handleBookingClose();
                         }
                     })
-
-
             });
-
-
-
     }
 
     return (

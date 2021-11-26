@@ -7,6 +7,8 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import useAuth from './../../../hooks/useAuth'
+import { Link } from 'react-router-dom';
+import { Button } from '@mui/material';
 
 const Appointments = ({ date, setDate }) => {
     const { user } = useAuth();
@@ -29,9 +31,11 @@ const Appointments = ({ date, setDate }) => {
                             <TableCell>Patient Name</TableCell>
                             <TableCell align="center">Email</TableCell>
                             <TableCell align="center">Service </TableCell>
-                            <TableCell align="right">Price&nbsp;($)</TableCell>
+
                             <TableCell align="center">Time&nbsp;(T)</TableCell>
-                            <TableCell align="right">Action&nbsp;(A)</TableCell>
+
+                            <TableCell align="right">Price&nbsp;($)</TableCell>
+
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -45,9 +49,13 @@ const Appointments = ({ date, setDate }) => {
                                 </TableCell>
                                 <TableCell align="center">{row.email}</TableCell>
                                 <TableCell align="center">{row.serviceName}</TableCell>
-                                <TableCell align="right">{row.fat}</TableCell>
+
                                 <TableCell align="center">{row.time}</TableCell>
-                                <TableCell align="right">{row.protein}</TableCell>
+
+                                <TableCell align="right">{row.payment ?
+                                    'Paid' :
+                                    <Link to={`/dashboard/payment/${row._id}`}><button>Pay</button></Link>
+                                }</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
